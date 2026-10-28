@@ -42,7 +42,7 @@ def check_and_add_file(hash, headers, playlistId, folderName):
         if not os.path.isfile(filepath):
             continue;
 
-        if hash == compute_file_hash(filepath, filename):
+        if hash == compute_file_hash(filepath):
             with open(filepath, "rb") as f:
                 try:
                     playlistId_int = int(playlistId)
